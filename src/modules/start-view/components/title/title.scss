@@ -1,41 +1,11 @@
-.start-view {
+.title {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  &::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('./bg-start-view.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    z-index: -4;
-  }
-  &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(256, 256, 256, 0.4);
-    z-index: -3;
-  }
-  &__title-box {
-    position: relative;
-  }
-  &__title {
+  &__txt {
     position: relative;
     z-index: 1;
     font-size: 55px;
   }
-  &__title-decor {
+  &__decor {
     position: absolute;
     bottom: -10px;
     right: -20px;
@@ -46,6 +16,7 @@
       margin-right: 10px;
       background-color: #16db65;
       border-radius: 36%;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
       &:last-child {
         margin-right: 0;
       }
