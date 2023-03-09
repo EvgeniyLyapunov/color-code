@@ -1,8 +1,15 @@
+import classNames from 'classnames';
+
 import './title.scss';
 
-const Title = () => {
+const Title = ({show}) => {
+  const title = classNames({
+    title: true,
+    title__visible: show
+  });
+
   return(
-    <div className="title">
+    <div className={title}>
       <h1 className="title__txt">Color Code</h1>
       <ul className="title__decor">
         <li className="title__decor-color title__decor-color-red"></li>

@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: 1s opacity ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  &__item {
+    margin-bottom: 40px;
+    &-btn {
+      padding: 10px 15px;
+      font-size: 30px;
+      text-transform: lowercase;
+      color: #fff;
+      border: none;
+      background-color: transparent;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}

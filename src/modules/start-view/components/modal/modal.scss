@@ -1,0 +1,48 @@
+.modal {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: dimgrey;
+  &__show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__window {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 0;
+    background-color: aquamarine;
+
+    &_show {
+      height: 90vh;
+      animation-name: modal-show;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-in-out;
+    }
+  }
+}
+
+@keyframes modal-show {
+  from {
+    height: 0;
+  }
+  to {
+    height: 90vh;
+  }
+}
+
+@keyframes modal-hide {
+  from {
+    height: 95vh;
+  }
+  to {
+    height: 0;
+  }
+}

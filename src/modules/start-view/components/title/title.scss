@@ -1,5 +1,10 @@
 .title {
   position: relative;
+  margin-bottom: 12vh;
+  
+  transition: 1s opacity ease-in-out;
+  visibility: hidden;
+  opacity: 0;
   &__txt {
     position: relative;
     z-index: 1;
@@ -36,5 +41,9 @@
         background-color: #d09259;
       }
     }
+  }
+  &__visible {
+    visibility: visible;
+    opacity: 1;
   }
 }
