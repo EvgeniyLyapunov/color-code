@@ -12,7 +12,7 @@ const MenuWindow = () => {
   useEffect(() => {
     setTimeout(() => {
       setShowMenu(!showMenu)
-    }, 200);
+    }, 10);
     // eslint-disable-next-line
   }, []);
 
@@ -20,10 +20,14 @@ const MenuWindow = () => {
     setShowModal(id);
   }
 
+  const onCloseModal = () => {
+    setShowModal('');
+  }
+
   return(
     <div className='menu-window'>
       <Menu showMenu={showMenu} onShowModal={onShowModal}/>
-      <Modal showModal={showModal}/>
+      <Modal showModal={showModal} onCloseModal={onCloseModal}/>
     </div>
   )
 }

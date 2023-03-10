@@ -10,7 +10,7 @@ const MainWindow = () => {
   useEffect(() => {
     setTimeout(() => {
       setShow(!show)
-    }, 200);
+    }, 10);
     // eslint-disable-next-line
   }, []);
 

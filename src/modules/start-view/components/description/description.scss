@@ -1,0 +1,29 @@
+.description {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  padding: 15px 10px 10px 10px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  &__title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  &__text {
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+    &::first-letter {
+      // font-family: 'Pattaya';
+      font-size: 24px;
+      line-height: 16px;
+      color: #3a86ff;
+      margin-right: 1px;
+    }
+  }
+}
