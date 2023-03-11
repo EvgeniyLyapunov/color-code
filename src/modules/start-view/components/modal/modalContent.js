@@ -1,4 +1,5 @@
 import Description from "../description/Description";
+import Author from "../author/Author";
 
 const modalContent = (id) => {
   switch(id) {
@@ -7,9 +8,9 @@ const modalContent = (id) => {
     case 'descr':
       return <Description/>;
     case 'author':
-      return null;
+      return <Author/>;
     default:
-      return null
+      return null;
   }
 }
 
