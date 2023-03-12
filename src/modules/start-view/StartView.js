@@ -6,14 +6,14 @@ import MenuWindow from "./components/menu-window/MenuWindow";
 
 import './start-view.scss';
 
-const StartView = () => {
+const StartView = ({gamePlay}) => {
   const [menu, setMenu] = useState(true);
 
   const onMenuVisible = () => {
     setMenu(!menu);
   }
 
-  const windows = menu ? <MainWindow/> 
+  const windows = menu ? <MainWindow gamePlay={gamePlay}/> 
                         : <MenuWindow/>;
   return(
     <div className='start-view'>

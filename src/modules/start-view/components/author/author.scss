@@ -26,6 +26,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-shrink: 0;
+    margin-bottom: 5vh;
     &-item {
       display: flex;
       flex-shrink: 0;
@@ -40,16 +41,16 @@
       font-size: 1px;
       color: transparent;
       &_site {
-        background: url('./website.png') center / cover no-repeat;
+        background: url('./site.svg') center / contain no-repeat;
       }
       &_email {
-        background: url('./mail.png') center / cover no-repeat;
+        background: url('./email.svg') center / contain no-repeat;
       }
       &_telegram {
-        background: url('./telegram.png') center / cover no-repeat;
+        background: url('./telegram.svg') center / contain no-repeat;
       }
       &_github {
-        background: url('./github.png') center / cover no-repeat;
+        background: url('./github.svg') center / contain no-repeat;
       }
     }
   }

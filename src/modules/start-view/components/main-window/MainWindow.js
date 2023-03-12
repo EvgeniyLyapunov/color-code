@@ -4,7 +4,7 @@ import Title from '../title/Title';
 import { BtnStart } from '../btn-start/BtnStart';
 import './main-window.scss';
 
-const MainWindow = () => {
+const MainWindow = ({gamePlay}) => {
   const[show, setShow] = useState(false);
 
   useEffect(() => {
@@ -14,10 +14,17 @@ const MainWindow = () => {
     // eslint-disable-next-line
   }, []);
 
+  const onStartGame = () => {
+
+    setTimeout(() => {
+      gamePlay('game');
+    }, 500)
+  }
+
   return(
       <div className='main-window'>
         <Title show={show}/>
-        <BtnStart show={show}>Старт</BtnStart>
+        <BtnStart show={show} onClick={onStartGame}>Старт</BtnStart>
       </div>
   )
 }
