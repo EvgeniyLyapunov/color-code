@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 import StartView from '../modules/start-view/StartView';
-import GameView from "../modules/game-view/GameView";
+import IntroView from "../modules/intro-view/IntroView";
 // import FinishView from "../modules/finish-view/FinishView";
 
 import './app.scss';
@@ -18,8 +18,10 @@ function App() {
     switch(gameStage) {
       case 'start':
         return <StartView gamePlay={gamePlay}/>;
+      case 'intro':
+        return <IntroView gamePlay={gamePlay}/>
       case 'game':
-        return <GameView gamePlay={gamePlay}/>
+        return null;
       case 'finish':
         return null;
       default:

@@ -1,0 +1,45 @@
+.intro-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: 0.5s all ease-in-out;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: grayscale(1);
+    transition: 0.5s all ease-in-out;
+    z-index: -1;
+  }
+  &_bg1 {
+    &::after {
+      background: url('../../assets/images/gameViewBg/bg-cave1.jpg') center / cover no-repeat;
+    }
+  }
+  &_bg2 {
+    &::after {
+      background: url('../../assets/images/gameViewBg/bg-cave2.jpg') center / cover no-repeat;
+    }
+  }
+  &_bg3 {
+    &::after {
+      background: url('../../assets/images/gameViewBg/bg-cave3.jpg') center / cover no-repeat;
+    }
+  }
+  &_bg4 {
+    &::after {
+      background: url('../../assets/images/gameViewBg/bg-cave4.jpg') center / cover no-repeat;
+    }
+  }
+  &_bg-color {
+    &::after {
+      filter: grayscale(0);
+    }
+  }
+}

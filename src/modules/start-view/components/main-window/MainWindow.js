@@ -17,7 +17,7 @@ const MainWindow = ({gamePlay}) => {
   const onStartGame = () => {
 
     setTimeout(() => {
-      gamePlay('game');
+      gamePlay('intro');
     }, 500)
   }
 

@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 
-import './square.scss';
+import './color-part-of-secret-code.scss';
 
-const Square = ({showTime}) => {
+const ColorPartOfSecretCode = ({showTime, introEnd}) => {
   const [bgColor, setBgColor] = useState('white');
 
+  // функция возвращает случайный цвет из заданного набора
   function setRandomColor() {
-    let rnd = Math.floor(Math.random() * (5 - 1 + 1)) + 1;
+    const max = 5;
+    const min = 1;
+    let rnd = Math.floor(Math.random() * (max - min + 1)) + min;
 
     switch(rnd) {
       case 1:
@@ -33,9 +36,9 @@ const Square = ({showTime}) => {
         } else {
           setBgColor(color);
         }
-  
       }, i * 100 + showTime);
     }
+    // eslint-disable-next-line
   }, []);
 
 
@@ -47,6 +50,14 @@ const Square = ({showTime}) => {
     backgroundColor: `${bgColor}`
   }
 
+  // если prop introEnd не null и перебор цветов закончен
+  // запускается функция introEnd, запускающая эффект плавного исчезновения компонента
+  if(introEnd && bgColor === 'end') {
+    setTimeout(() => {
+    introEnd();
+    }, 150);
+  }
+
   return (
     <div className="square" style={style}>
 
@@ -54,4 +65,4 @@ const Square = ({showTime}) => {
   )
 }
 
-export default Square;
+export default ColorPartOfSecretCode;
