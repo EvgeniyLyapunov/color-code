@@ -1,19 +1,32 @@
-import styled from "styled-components";
+import classNames from "classnames";
+import { useSelector, useDispatch } from "react-redux";
+import { gameStage, startBtnEffect, bgGame } from "../../../../redux/actions";
 
-export const  BtnStart = styled.button`
-  position: absolute;
-  bottom: 10vh;
-  right: 10vw;
-  display: block;
-  padding: 28px 20px;
-  color:#474747;
-  font-size: 30px;
-  background-color: #c6c6c6;
-  border: none;
-  border-radius: 40%;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+import "./btn-start.scss";
 
-  transition: 1s opacity ease-in-out;
-  visibility: ${props => props.show ? 'visible' : 'hidden'};
-  opacity: ${props => props.show ? '1' : '0'};
-`;
+const BtnStart = ({ show }) => {
+  const btnPressed = useSelector((state) => state.startBtnEffect);
+  const dispatch = useDispatch();
+  const btnClass = classNames({
+    "btn-start": true,
+    "btn-start_visibility": show,
+    "btn-start_opacity": show,
+    "btn-start_pressed": btnPressed,
+  });
+
+  const onStartGame = () => {
+    dispatch(startBtnEffect());
+    dispatch(bgGame());
+    setTimeout(() => {
+      dispatch(gameStage("intro"));
+    }, 600);
+  };
+
+  return (
+    <button className={btnClass} onClick={onStartGame} disabled={btnPressed}>
+      Старт
+    </button>
+  );
+};
+
+export default BtnStart;

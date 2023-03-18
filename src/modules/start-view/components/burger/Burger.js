@@ -1,23 +1,20 @@
-import { useState } from 'react';
-import classNames from 'classnames';
+import { useSelector, useDispatch } from "react-redux/es/exports";
+import classNames from "classnames";
 
-import './burger.scss'
+import { menuVisible } from "../../../../redux/actions";
 
-const Burger = ({onMenuVisible}) => {
-  const [btnState, setBtnState] = useState(false);
+import "./burger.scss";
+
+const Burger = () => {
+  const buttonState = useSelector((state) => state.menuVisible);
+  const dispatch = useDispatch();
+
   const burger = classNames({
     burger: true,
-    burger__open: btnState
+    burger__open: buttonState,
   });
-  const openMenu = () => {
-    setBtnState(!btnState);
-    onMenuVisible();
-  }
 
-  return(
-    <button className={burger}
-            onClick={openMenu}/>
-  )
-}
+  return <button className={burger} onClick={() => dispatch(menuVisible())} />;
+};
 
 export default Burger;
