@@ -1,9 +1,6 @@
 const initialState = {
   // переключение модулей
   gameStage: "start",
-  // переключение окон в модуле StartView
-  menuVisible: false,
-  startBtnEffect: false,
   bgGame: "",
   secretCode: {},
   colorsByString: ["red", "yellow", "blue", "green", "brown"],
@@ -18,16 +15,6 @@ const globalReducer = (state = initialState, action) => {
       return {
         ...state,
         gameStage: action.payload,
-      };
-    case "MENU_VISIBLE":
-      return {
-        ...state,
-        menuVisible: !state.menuVisible,
-      };
-    case "START_BTN_EFFECT":
-      return {
-        ...state,
-        startBtnEffect: !state.startBtnEffect,
       };
     case "BG_GAME":
       return {

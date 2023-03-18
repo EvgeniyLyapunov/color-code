@@ -6,7 +6,9 @@ import { menuVisible } from "../../../../redux/actions";
 import "./burger.scss";
 
 const Burger = () => {
-  const buttonState = useSelector((state) => state.menuVisible);
+  const buttonState = useSelector(
+    (state) => state.startViewReducer.menuVisible
+  );
   const dispatch = useDispatch();
 
   const burger = classNames({

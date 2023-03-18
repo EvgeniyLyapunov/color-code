@@ -1,36 +1,49 @@
-import classNames from 'classnames';
+import classNames from "classnames";
+import { useDispatch } from "react-redux";
 
-import './menu.scss';
+import { showModal } from "../../../../redux/actions";
 
-const Menu = ({showMenu, onShowModal}) => {
+import "./menu.scss";
+
+const Menu = ({ showMenu }) => {
+  const dispatch = useDispatch();
+
   const menu = classNames({
     menu: true,
-    menu__visible: showMenu
+    menu__visible: showMenu,
   });
 
-  const openModal = (id) => {
-    onShowModal(id);
-  }
-
-  return(
+  return (
     <ul className={menu}>
-      <li className='menu__item'>
-        <button className='menu__item-btn' id='auth' onClick={(e) => openModal(e.target.id)}>
+      <li className="menu__item">
+        <button
+          className="menu__item-btn"
+          id="auth"
+          onClick={(e) => dispatch(showModal(e.target.id))}
+        >
           Авторизация
         </button>
       </li>
-      <li className='menu__item'>
-        <button className='menu__item-btn' id='descr' onClick={(e) => openModal(e.target.id)}>
+      <li className="menu__item">
+        <button
+          className="menu__item-btn"
+          id="descr"
+          onClick={(e) => dispatch(showModal(e.target.id))}
+        >
           Описание
         </button>
       </li>
-      <li className='menu__item'>
-        <button className='menu__item-btn' id='author' onClick={(e) => openModal(e.target.id)}>
+      <li className="menu__item">
+        <button
+          className="menu__item-btn"
+          id="author"
+          onClick={(e) => dispatch(showModal(e.target.id))}
+        >
           Автор
         </button>
       </li>
     </ul>
-  )
-}
+  );
+};
 
 export default Menu;

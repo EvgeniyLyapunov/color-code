@@ -1,35 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-import Menu from '../menu/Menu';
-import Modal from '../modal/Modal';
+import Menu from "../menu/Menu";
+import Modal from "../modal/Modal";
 
-import './menu-window.scss';
+import "./menu-window.scss";
 
 const MenuWindow = () => {
-  const[showMenu, setShowMenu] = useState(false);
-  const[showModal, setShowModal] = useState('');
+  // флаг для плавного появления элемента
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowMenu(!showMenu)
-    }, 10);
+    setShowMenu(!showMenu);
     // eslint-disable-next-line
   }, []);
 
-  const onShowModal = (id) => {
-    setShowModal(id);
-  }
-
-  const onCloseModal = () => {
-    setShowModal('');
-  }
-
-  return(
-    <div className='menu-window'>
-      <Menu showMenu={showMenu} onShowModal={onShowModal}/>
-      <Modal showModal={showModal} onCloseModal={onCloseModal}/>
+  return (
+    <div className="menu-window">
+      <Menu showMenu={showMenu} />
+      <Modal />
     </div>
-  )
-}
+  );
+};
 
 export default MenuWindow;

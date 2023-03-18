@@ -14,6 +14,13 @@ export const menuVisible = () => {
   };
 };
 
+export const showModal = (idModal) => {
+  return {
+    type: "SHOW_MODAL",
+    payload: idModal,
+  };
+};
+
 export const startBtnEffect = () => {
   return {
     type: "START_BTN_EFFECT",

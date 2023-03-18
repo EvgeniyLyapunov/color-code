@@ -5,12 +5,11 @@ import BtnStart from "../btn-start/BtnStart";
 import "./main-window.scss";
 
 const MainWindow = () => {
+  // флаг для включения плавного появления элементов
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShow(!show);
-    }, 10);
+    setShow(!show);
     // eslint-disable-next-line
   }, []);
 

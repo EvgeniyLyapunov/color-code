@@ -5,7 +5,9 @@ import { gameStage, startBtnEffect, bgGame } from "../../../../redux/actions";
 import "./btn-start.scss";
 
 const BtnStart = ({ show }) => {
-  const btnPressed = useSelector((state) => state.startBtnEffect);
+  const btnPressed = useSelector(
+    (state) => state.startViewReducer.startBtnEffect
+  );
   const dispatch = useDispatch();
   const btnClass = classNames({
     "btn-start": true,

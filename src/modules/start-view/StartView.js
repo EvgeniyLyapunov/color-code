@@ -7,7 +7,9 @@ import MenuWindow from "./components/menu-window/MenuWindow";
 import "./start-view.scss";
 
 const StartView = () => {
-  const menuVisible = useSelector((state) => state.menuVisible);
+  const menuVisible = useSelector(
+    (state) => state.startViewReducer.menuVisible
+  );
 
   const windows = menuVisible ? <MenuWindow /> : <MainWindow />;
 

@@ -13,7 +13,7 @@ import "./app.scss";
 const IntroView = lazy(() => import("../modules/intro-view/IntroView"));
 
 function App() {
-  const currentStage = useSelector((state) => state.gameStage);
+  const currentStage = useSelector((state) => state.globalReducer.gameStage);
 
   function setCurrentView() {
     switch (currentStage) {

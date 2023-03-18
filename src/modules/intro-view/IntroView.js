@@ -9,7 +9,7 @@ import "./intro-view.scss";
 const IntroView = () => {
   // состояние отвечает за цвет bg, изначально чб
   const [colorBgGame, setColorBgGame] = useState(false);
-  const bgGame = useSelector((state) => state.bgGame);
+  const bgGame = useSelector((state) => state.globalReducer.bgGame);
 
   // функция меняет состояние цвета bg с чб на цвет
   // передаётся в компонент Intro и вызывается там
