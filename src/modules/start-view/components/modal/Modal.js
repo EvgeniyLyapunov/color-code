@@ -1,17 +1,15 @@
-import { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import classNames from "classnames";
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import classNames from 'classnames';
 
-import { showModal } from "../../../../redux/actions";
-import modalBg from "./modalBg";
-import modalContent from "./modalContent";
+import { showModal } from '../../../../redux/slices/startSlise';
+import modalBg from './modalBg';
+import modalContent from './modalContent';
 
-import "./modal.scss";
+import './modal.scss';
 
 const Modal = () => {
-  const showModalId = useSelector(
-    (state) => state.startViewReducer.showModalId
-  );
+  const showModalId = useSelector((state) => state.startReducer.showModalId);
   const dispatch = useDispatch();
   // флаг для плавного сворачивания модального окна
   const [closeWindow, setCloseWindow] = useState(false);
@@ -23,7 +21,7 @@ const Modal = () => {
   const closeModal = () => {
     setCloseWindow(!closeWindow);
     setTimeout(() => {
-      dispatch(showModal(""));
+      dispatch(showModal(''));
     }, 700);
   };
 
@@ -46,7 +44,7 @@ const Modal = () => {
   return (
     <div className={modal}>
       <div className={modalWindow}>
-        <button className="modal__window-close" onClick={closeModal} />
+        <button className='modal__window-close' onClick={closeModal} />
         {contentActive}
       </div>
     </div>

@@ -1,20 +1,18 @@
-import { useSelector } from "react-redux/es/exports";
+import { useSelector } from 'react-redux/es/exports';
 
-import Burger from "./components/burger/Burger";
-import MainWindow from "./components/main-window/MainWindow";
-import MenuWindow from "./components/menu-window/MenuWindow";
+import Burger from './components/burger/Burger';
+import MainWindow from './components/main-window/MainWindow';
+import MenuWindow from './components/menu-window/MenuWindow';
 
-import "./start-view.scss";
+import './start-view.scss';
 
 const StartView = () => {
-  const menuVisible = useSelector(
-    (state) => state.startViewReducer.menuVisible
-  );
+  const menuVisible = useSelector((state) => state.startReducer.menuVisible);
 
   const windows = menuVisible ? <MenuWindow /> : <MainWindow />;
 
   return (
-    <div className="start-view">
+    <div className='start-view'>
       <Burger />
       {windows}
     </div>

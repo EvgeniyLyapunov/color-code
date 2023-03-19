@@ -1,14 +1,12 @@
-import { useSelector, useDispatch } from "react-redux/es/exports";
-import classNames from "classnames";
+import { useSelector, useDispatch } from 'react-redux/es/exports';
+import classNames from 'classnames';
 
-import { menuVisible } from "../../../../redux/actions";
+import { menuVisible } from '../../../../redux/slices/startSlise';
 
-import "./burger.scss";
+import './burger.scss';
 
 const Burger = () => {
-  const buttonState = useSelector(
-    (state) => state.startViewReducer.menuVisible
-  );
+  const buttonState = useSelector((state) => state.startReducer.menuVisible);
   const dispatch = useDispatch();
 
   const burger = classNames({

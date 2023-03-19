@@ -1,9 +1,9 @@
-import classNames from "classnames";
-import { useDispatch } from "react-redux";
+import classNames from 'classnames';
+import { useDispatch } from 'react-redux';
 
-import { showModal } from "../../../../redux/actions";
+import { showModal } from '../../../../redux/slices/startSlise';
 
-import "./menu.scss";
+import './menu.scss';
 
 const Menu = ({ showMenu }) => {
   const dispatch = useDispatch();
@@ -15,28 +15,28 @@ const Menu = ({ showMenu }) => {
 
   return (
     <ul className={menu}>
-      <li className="menu__item">
+      <li className='menu__item'>
         <button
-          className="menu__item-btn"
-          id="auth"
+          className='menu__item-btn'
+          id='auth'
           onClick={(e) => dispatch(showModal(e.target.id))}
         >
           Авторизация
         </button>
       </li>
-      <li className="menu__item">
+      <li className='menu__item'>
         <button
-          className="menu__item-btn"
-          id="descr"
+          className='menu__item-btn'
+          id='descr'
           onClick={(e) => dispatch(showModal(e.target.id))}
         >
           Описание
         </button>
       </li>
-      <li className="menu__item">
+      <li className='menu__item'>
         <button
-          className="menu__item-btn"
-          id="author"
+          className='menu__item-btn'
+          id='author'
           onClick={(e) => dispatch(showModal(e.target.id))}
         >
           Автор

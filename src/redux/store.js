@@ -1,10 +1,11 @@
-import { createStore, combineReducers } from "redux";
-import globalReducer from "./reducers/globalReducer";
-import startViewReducer from "./reducers/startViewReducer";
+import { configureStore } from '@reduxjs/toolkit';
+import globalReducer from './slices/globalSlice';
+import startReducer from './slices/startSlise';
 
-const store = createStore(
-  combineReducers({ globalReducer, startViewReducer }),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = configureStore({
+  reducer: { globalReducer, startReducer },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
+  devTools: process.env.NODE_ENV !== 'production',
+});
 
 export default store;
