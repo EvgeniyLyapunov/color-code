@@ -1,16 +1,14 @@
-@import '../../../../style/variables.scss';
-
-.btn-start {
+.confirm-btn {
   position: absolute;
-  bottom: 10vh;
+  bottom: 6vh;
   right: 10vw;
   display: block;
-  padding: 28px 20px;
+  padding: 15px 20px;
   color: #474747;
-  font-size: 30px;
-  background-color: $greyBg;
+  font-size: 18px;
+  background-color: #c6c6c6;
   border: none;
-  border-radius: 40%;
+  border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -23,11 +21,10 @@
   &_opacity {
     opacity: 1;
   }
-  &_pressed {
-    box-shadow: rgba(255, 255, 255, 0.8) 0px 22px 70px 4px;
-  }
 }
 
-
-// visibility: ${(props) => (props.show ? "visible" : "hidden")};
-  // opacity: ${(props) => (props.show ? "1" : "0")};
+@media (max-width: 330px) and (max-height: 480px) {
+  .confirm-btn {
+    padding: 10px;
+  }
+}

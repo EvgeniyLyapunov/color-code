@@ -4,27 +4,27 @@ const generateColorCode = () => {
     const min = 1;
     let rnd = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    switch(rnd) {
+    switch (rnd) {
       case 1:
-        return 'red';
+        return '#ff006e';
       case 2:
-        return 'yellow';
+        return '#ffed66';
       case 3:
-        return 'blue';
+        return '#3a86ff';
       case 4:
-        return 'green';
+        return '#16db65';
       case 5:
-        return 'brown';
+        return '#d09259';
       default:
-        return 'red';
+        return '#ff006e';
     }
   }
   return {
     first: rndColor(),
     second: rndColor(),
     third: rndColor(),
-    fourth: rndColor()
-  }
+    fourth: rndColor(),
+  };
 };
 
 export default generateColorCode;

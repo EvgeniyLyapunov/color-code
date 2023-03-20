@@ -1,29 +1,28 @@
-import React from "react";
-import { lazy, Suspense } from "react";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { lazy, Suspense } from 'react';
+import { useSelector } from 'react-redux';
 
-import StartView from "../modules/start-view/StartView";
-// import IntroView from "../modules/intro-view/IntroView";
-// import FinishView from "../modules/finish-view/FinishView";
+import StartView from '../modules/start-view/StartView';
 
-import Loading from "./components/loading/Loading";
+import Loading from './components/loading/Loading';
 
-import "./app.scss";
+import './app.scss';
 
-const IntroView = lazy(() => import("../modules/intro-view/IntroView"));
+const IntroView = lazy(() => import('../modules/intro-view/IntroView'));
+const GameView = lazy(() => import('../modules/game-view/GameView'));
 
 function App() {
   const currentStage = useSelector((state) => state.globalReducer.gameStage);
 
   function setCurrentView() {
     switch (currentStage) {
-      case "start":
+      case 'start':
         return <StartView />;
-      case "intro":
+      case 'intro':
         return <IntroView />;
-      case "game":
-        return null;
-      case "finish":
+      case 'game':
+        return <GameView />;
+      case 'finish':
         return null;
       default:
         return null;
@@ -33,7 +32,7 @@ function App() {
   const currentView = setCurrentView();
 
   return (
-    <div className="app">
+    <div className='app'>
       <Suspense fallback={<Loading />}>{currentView}</Suspense>
     </div>
   );
