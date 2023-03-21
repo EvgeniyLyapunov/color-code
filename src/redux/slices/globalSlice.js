@@ -8,10 +8,6 @@ const initialState = {
   gameStage: 'start',
   bgGame: '',
   secretCode: {},
-  colorsByString: ['red', 'yellow', 'blue', 'green', 'brown'],
-  colorsByHash: ['#ff006e', '#ffed66', '#3a86ff', '#16db65', '#d09259'],
-  responseByString: ['black', 'white'],
-  responseByHash: ['#22223b', '#dee2e6'],
 };
 
 const globalSlise = createSlice({

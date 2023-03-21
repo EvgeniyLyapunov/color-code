@@ -8,7 +8,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   transition: 0.9s opacity ease-in-out;
   &_display {
     display: flex;
@@ -29,7 +29,33 @@
       width: calc((100% - 30px) / 3);
       height: 40%;
       border-radius: 10px;
-      background-color: teal;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      transition: 0.3s box-shadow ;
+      &_red {
+        background-color: #ff006e;
+      }
+      &_yellow {
+        background-color: #ffed66;
+      }
+      &_blue {
+        background-color: #3a86ff;
+      }
+      &_green {
+        background-color: #16db65;
+      }
+      &_brown {
+        background-color: #d09259;
+      }
+      &_cancel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+      }
+      &_pressed {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      }
     }
   }
 }

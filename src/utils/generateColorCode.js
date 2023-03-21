@@ -6,17 +6,17 @@ const generateColorCode = () => {
 
     switch (rnd) {
       case 1:
-        return '#ff006e';
+        return 'red';
       case 2:
-        return '#ffed66';
+        return 'yellow';
       case 3:
-        return '#3a86ff';
+        return 'blue';
       case 4:
-        return '#16db65';
+        return 'green';
       case 5:
-        return '#d09259';
+        return 'brown';
       default:
-        return '#ff006e';
+        return 'red';
     }
   }
   return {

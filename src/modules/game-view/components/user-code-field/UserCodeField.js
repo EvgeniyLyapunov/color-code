@@ -14,6 +14,8 @@ const UserCodeField = ({ show }) => {
     'user-code-field_opacity': show,
   });
 
+  // функция откывает палитру и анимирует нажатие кнопки 'user-code-field__item'
+  // записываут в store id нажатого элемента
   const openEditCodeModal = (e) => {
     dispatch(codeItemId(e.target.id));
     e.target.classList.add('user-code-field__item_pressed');
