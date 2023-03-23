@@ -28,6 +28,9 @@
   }
 }
 
-
-// visibility: ${(props) => (props.show ? "visible" : "hidden")};
-  // opacity: ${(props) => (props.show ? "1" : "0")};
+@media (min-width: 475px) {
+  .btn-start {
+    bottom: 80px;
+    right: 80px;
+  }
+}

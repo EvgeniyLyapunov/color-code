@@ -11,7 +11,10 @@
   align-items: center;
   border-radius: 4px;
   background-color: $greyBg;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset, rgb(204, 219, 232) -3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) 3px -3px 6px 1px inset;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset,
+    rgb(204, 219, 232) -3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) 3px -3px 6px 1px inset;
   transition: 1s opacity ease-in-out, 0.5s box-shadow ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -26,10 +29,12 @@
     height: 65%;
     border-radius: 4px;
     background-color: $greyBg;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     transition: 0.3s box-shadow ease-in-out, 0.3s background-color ease-in-out;
     &_pressed {
-      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+      box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+        rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     }
     &_red {
       background-color: $redBg;
@@ -49,6 +54,5 @@
     &_cancel {
       background-color: $greyBg;
     }
-  
   }
 }

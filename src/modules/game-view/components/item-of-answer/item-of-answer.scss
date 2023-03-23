@@ -1,0 +1,16 @@
+.item-of-answer {
+  width: 25%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &_almost {
+    background-image: url('../../../../assets/icons/almost.svg');
+  }
+  &_yes {
+    background-image: url('../../../../assets/icons/yes.svg');
+  }
+  &_no {
+    background-image: url('../../../../assets/icons/empty.svg');
+  }
+}

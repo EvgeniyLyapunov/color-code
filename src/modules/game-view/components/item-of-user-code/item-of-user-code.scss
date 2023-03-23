@@ -1,0 +1,23 @@
+@import '../../../../style/variables.scss';
+
+.item-of-user-code {
+  width: 20%;
+  height: 80%;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  &_red {
+    background-color: $redBg;
+  }
+  &_yellow {
+    background-color: $yellowBg;
+  }
+  &_blue {
+    background-color: $blueBg;
+  }
+  &_green {
+    background-color: $greenBg;
+  }
+  &_brown {
+    background-color: $brownBg;
+  }
+}

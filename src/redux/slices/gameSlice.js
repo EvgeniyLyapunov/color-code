@@ -14,6 +14,14 @@ const initialState = {
   codeItemId: '',
   // id кнопки выбранного цвета
   selectedColorId: '',
+  // флаг готовности кода игрока для проверки
+  isCodeReady: false,
+  // массив сделанных ходов игрока
+  usersMoves: [],
+  // массив ответов на ходы игрока
+  responsesToUserMoves: [],
+  // флаг победы игрока
+  isWin: false,
 };
 
 const gameSlice = createSlice({
@@ -35,10 +43,36 @@ const gameSlice = createSlice({
     selectedColorId: (state, action) => {
       state.selectedColorId = action.payload;
     },
+    isCodeReady: (state) => {
+      state.isCodeReady = !state.isCodeReady;
+    },
+    usersMoves: (state, action) => {
+      state.usersMoves = [...state.usersMoves, action.payload];
+      state.usersVariantCode = { first: '', second: '', third: '', fourth: '' };
+      state.codeItemId = '';
+      state.selectedColorId = '';
+    },
+    responsesToUserMoves: (state, action) => {
+      state.responsesToUserMoves = [
+        ...state.responsesToUserMoves,
+        action.payload,
+      ];
+    },
+    isWin: (state) => {
+      state.isWin = !state.isWin;
+    },
   },
 });
 
 const { actions, reducer } = gameSlice;
 export default reducer;
-export const { chooseColor, codeItemId, selectedColorId, usersVariantCode } =
-  actions;
+export const {
+  chooseColor,
+  codeItemId,
+  selectedColorId,
+  usersVariantCode,
+  isCodeReady,
+  usersMoves,
+  responsesToUserMoves,
+  isWin,
+} = actions;
