@@ -1,0 +1,52 @@
+@import '../../../../style/variables.scss';
+
+.counter {
+  position: absolute;
+  left: 5%;
+  bottom: 7%;
+  height: 35px;
+  transition: 1s opacity ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  &_visibility {
+    visibility: visible;
+  }
+  &_opacity {
+    opacity: 1;
+  }
+  &__label {
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  &__line {
+    width: 105px;
+    height: 10px;
+    background-color: $greenBg;
+    &_danger {
+      background-color: $yellowBg;
+    }
+    &_verydanger {
+      background-color: $redBg;
+      animation: verydanger 2s linear infinite;
+    }
+  }
+}
+
+@keyframes verydanger {
+  0% {
+    transform: scale(0.8, 0.8);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+  }
+}

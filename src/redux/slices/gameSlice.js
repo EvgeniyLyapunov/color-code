@@ -22,6 +22,26 @@ const initialState = {
   responsesToUserMoves: [],
   // флаг победы игрока
   isWin: false,
+  // жизненная энергия - 7 ходов
+  lifePower: 105,
+  // массив вариантов победного приветствия
+  winSpeech: [
+    'Это была сильная игра!',
+    'Вы победитель!',
+    'У вас всё получилось!',
+    'Вы король логики!',
+    'Вся слава Победителю!',
+    'Да Вы просто супер!',
+    'Вы сделали Это!',
+    'Это победа!',
+    'Ощутите сладость победы!',
+    'Кристальный разум - путь победителя!',
+    'Чистый разум друг Победителя!',
+    'Как приятно звучит - Вы победитель!',
+    'Чистый разум - заслуженная Победа!',
+    'Сильный разум - путь Победителя!',
+    'А ведь вы сделали это!!!',
+  ],
 };
 
 const gameSlice = createSlice({
@@ -61,6 +81,9 @@ const gameSlice = createSlice({
     isWin: (state) => {
       state.isWin = !state.isWin;
     },
+    lifePower: (state) => {
+      state.lifePower = state.lifePower - 15;
+    },
   },
 });
 
@@ -75,4 +98,5 @@ export const {
   usersMoves,
   responsesToUserMoves,
   isWin,
+  lifePower,
 } = actions;

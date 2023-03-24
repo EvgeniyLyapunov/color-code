@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
 import ConfirmBtn from './components/confirm-btn/ConfirmBtn';
+import Counter from './components/counter/Counter';
 import UserCodeField from './components/user-code-field/UserCodeField';
 import Palitra from './components/palitra/Palitra';
+import VictoryMessage from './components/victory-message/VictoryMessage';
 import FieldOfMoves from './components/field-of-moves/FieldOfMoves';
 import isUserCodeReady from '../../utils/isUserCodeReady';
 
@@ -45,7 +47,9 @@ const GameView = () => {
       <FieldOfMoves />
       <UserCodeField show={show} />
       <ConfirmBtn show={show} />
+      <Counter show={show} />
       <Palitra />
+      <VictoryMessage />
     </div>
   );
 };

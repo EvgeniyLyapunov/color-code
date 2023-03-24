@@ -10,6 +10,7 @@ import './app.scss';
 
 const IntroView = lazy(() => import('../modules/intro-view/IntroView'));
 const GameView = lazy(() => import('../modules/game-view/GameView'));
+const FinishView = lazy(() => import('../modules/finish-view/FinishView'));
 
 function App() {
   const currentStage = useSelector((state) => state.globalReducer.gameStage);
@@ -23,7 +24,7 @@ function App() {
       case 'game':
         return <GameView />;
       case 'finish':
-        return null;
+        return <FinishView />;
       default:
         return null;
     }

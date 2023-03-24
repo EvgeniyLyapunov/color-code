@@ -1,4 +1,4 @@
-const chooseBg = () => {
+const chooseGameBg = () => {
   const max = 4;
   const min = 1;
   let rnd = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -17,4 +17,4 @@ const chooseBg = () => {
   }
 };
 
-export default chooseBg;
+export default chooseGameBg;

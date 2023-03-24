@@ -6,6 +6,7 @@ import {
   usersMoves,
   responsesToUserMoves,
   isWin,
+  lifePower,
 } from '../../../../redux/slices/gameSlice';
 import clearUserCodeField from '../../../../utils/clearUserCodeField';
 import generateAnswer from '../../../../utils/generateAnswer';
@@ -39,13 +40,12 @@ const ConfirmBtn = ({ show }) => {
       // сохранение в store ответ на ход и вывод ответа в игровое поле
       setTimeout(() => {
         dispatch(responsesToUserMoves(answer));
+        dispatch(lifePower());
         // проверка ответа на победу
-        setTimeout(() => {
-          const checkWin = checkForVictory(answer);
-          if (checkWin) {
-            dispatch(isWin());
-          }
-        }, 400);
+        const checkWin = checkForVictory(answer);
+        if (checkWin) {
+          dispatch(isWin());
+        }
       }, 400);
     }, 450);
   };
