@@ -2,9 +2,9 @@
 
 .counter {
   position: absolute;
-  left: 5%;
+  left: 8%;
   bottom: 7%;
-  height: 35px;
+  height: 40px;
   transition: 1s opacity ease-in-out;
   visibility: hidden;
   opacity: 0;
@@ -21,7 +21,7 @@
   }
   &__line {
     width: 105px;
-    height: 10px;
+    height: 20px;
     background-color: $greenBg;
     &_danger {
       background-color: $yellowBg;

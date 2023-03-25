@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     &_bg {
       &-auth {
         background: url('./bg-start-view3.jpg') top / cover no-repeat;
@@ -44,7 +45,7 @@
       margin-right: 15px;
       margin-bottom: 10px;
       border: none;
-      background: url('./circle_close.svg') center / contain no-repeat;;
+      background: url('./circle_close.svg') center / contain no-repeat;
     }
     &_show {
       height: 90vh;

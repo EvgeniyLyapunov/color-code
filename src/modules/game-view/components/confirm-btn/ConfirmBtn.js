@@ -6,6 +6,7 @@ import {
   usersMoves,
   responsesToUserMoves,
   isWin,
+  isLose,
   lifePower,
 } from '../../../../redux/slices/gameSlice';
 import clearUserCodeField from '../../../../utils/clearUserCodeField';
@@ -16,6 +17,7 @@ import './confirm-btn.scss';
 
 const ConfirmBtn = ({ show }) => {
   const dispatch = useDispatch();
+  const isAlive = useSelector((state) => state.gameReducer.lifePower);
   const secretCode = useSelector((state) => state.globalReducer.secretCode);
   const currentUserCode = useSelector(
     (state) => state.gameReducer.usersVariantCode
@@ -45,6 +47,10 @@ const ConfirmBtn = ({ show }) => {
         const checkWin = checkForVictory(answer);
         if (checkWin) {
           dispatch(isWin());
+        }
+        // проверка оставшихся ходов
+        if (!checkWin && isAlive === 15) {
+          dispatch(isLose());
         }
       }, 400);
     }, 450);

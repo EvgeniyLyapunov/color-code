@@ -1,5 +1,5 @@
 const chooseFinishWinBg = () => {
-  const max = 7;
+  const max = 9;
   const min = 1;
   let rnd = Math.floor(Math.random() * (max - min + 1)) + min;
 
@@ -18,6 +18,10 @@ const chooseFinishWinBg = () => {
       return '_bg6';
     case 7:
       return '_bg7';
+    case 8:
+      return '_bg8';
+    case 9:
+      return '_bg9';
     default:
       return '_bg1';
   }

@@ -20,7 +20,9 @@ const VictoryMessage = () => {
   const [userMoveComponent, setUserMoveComponent] = useState(null);
   const [answerComponent, setAnswerComponent] = useState(null);
 
+  // флаг показа этого окна
   const [showVictory, setShowVictory] = useState(false);
+
   useEffect(() => {
     if (moves[moves.length - 1] != null) {
       setUserMoveComponent(<UserMove userCode={moves[moves.length - 1]} />);
@@ -28,6 +30,8 @@ const VictoryMessage = () => {
       setTimeout(() => {
         setShowVictory((showVictory) => (showVictory = !showVictory));
       }, 1000);
+
+      // выбор bg для финишного окна
       dispatch(bgFinishWin());
     }
     // eslint-disable-next-line

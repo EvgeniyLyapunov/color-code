@@ -1,6 +1,6 @@
 @import '../../../../style/variables.scss';
 
-.victory-message {
+.loser-message {
   visibility: collapse;
   opacity: 0;
   display: flex;
@@ -15,6 +15,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(1);
   transition: 1s all ease-in-out;
   &_view_bg1 {
     background: url('../../../../assets/images/gameViewBg/bg-cave1.jpg') center /
@@ -32,46 +33,6 @@
     background: url('../../../../assets/images/gameViewBg/bg-cave4.jpg') center /
       cover no-repeat;
   }
-  &_view_bg5 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave5.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg6 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave6.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg7 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave7.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg8 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave8.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg9 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave9.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg10 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave10.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg11 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave11.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg12 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave12.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg13 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave13.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg14 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave14.jpg') center /
-      cover no-repeat;
-  }
   &_display {
     visibility: hidden;
   }
@@ -82,11 +43,11 @@
   &__words {
     margin-bottom: 30px;
     font-weight: 700;
-    font-size: 20px;
-    color: $yellowBg;
+    font-size: 30px;
+    color: #fff;
     text-align: center;
   }
-  &__btn-next {
+  &__btn-close {
     position: absolute;
     bottom: 6vh;
     right: 10vw;

@@ -24,6 +24,8 @@ const initialState = {
   isWin: false,
   // жизненная энергия - 7 ходов
   lifePower: 105,
+  // флаг поражения игрока
+  isLose: false,
   // массив вариантов победного приветствия
   winSpeech: [
     'Это была сильная игра!',
@@ -81,8 +83,16 @@ const gameSlice = createSlice({
     isWin: (state) => {
       state.isWin = !state.isWin;
     },
+    isLose: (state) => {
+      state.isLose = !state.isLose;
+    },
     lifePower: (state) => {
       state.lifePower = state.lifePower - 15;
+    },
+    newGame: (state) => {
+      state.lifePower = 105;
+      state.usersMoves = [];
+      state.responsesToUserMoves = [];
     },
   },
 });
@@ -99,4 +109,6 @@ export const {
   responsesToUserMoves,
   isWin,
   lifePower,
+  newGame,
+  isLose,
 } = actions;
