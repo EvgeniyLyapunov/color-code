@@ -1,4 +1,5 @@
 @import '../../../../style/variables.scss';
+@import '../../../../style//mixins.scss';
 
 .victory-message {
   visibility: collapse;
@@ -16,62 +17,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   transition: 1s all ease-in-out;
-  &_view_bg1 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave1.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg2 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave2.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg3 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave3.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg4 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave4.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg5 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave5.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg6 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave6.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg7 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave7.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg8 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave8.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg9 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave9.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg10 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave10.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg11 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave11.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg12 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave12.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg13 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave13.jpg') center /
-      cover no-repeat;
-  }
-  &_view_bg14 {
-    background: url('../../../../assets/images/gameViewBg/bg-cave14.jpg') center /
-      cover no-repeat;
-  }
+  @include game-bg;
   &_display {
     visibility: hidden;
   }
@@ -87,22 +33,6 @@
     text-align: center;
   }
   &__btn-next {
-    position: absolute;
-    bottom: 6vh;
-    right: 10vw;
-    display: block;
-    padding: 15px 20px;
-    color: #22223b;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: $greyBg;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    transition: 0.4s box-shadow ease-in-out;
-    &_press {
-      box-shadow: #dee2e6 0px 22px 40px 4px, #dee2e6 0px -22px 40px 4px;
-    }
+    @include btn-next;
   }
 }
