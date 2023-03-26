@@ -34,28 +34,28 @@ const Description = () => {
         Ответ строится из&nbsp;трёх иконок:
         <br />
         <span className='description__text-icon description__text-icon_yes'></span>
-        &mdash;&nbsp;означает что положение одного из&nbsp;цветов в&nbsp;нашем
+        &mdash;&nbsp;означает, что положение одного из&nbsp;цветов в&nbsp;нашем
         варианте полностью совпадает с&nbsp;таким&nbsp;же цветом
-        и&nbsp;положением его в&nbsp;секретном коде;
+        и&nbsp;положением его в&nbsp;&laquo;Секретном Коде&raquo;;
         <br />
         <span className='description__text-icon description__text-icon_almost'></span>
         &mdash;&nbsp;означает, что один из&nbsp;цветов в&nbsp;нашем варианте
-        есть и&nbsp;в&nbsp; секретном коде, но&nbsp;их&nbsp;положение
-        не&nbsp;совпадает;
+        есть и&nbsp;в&nbsp; &laquo;Секретном Коде&raquo;,
+        но&nbsp;их&nbsp;положение не&nbsp;совпадает;
         <br />
         <span className='description__text-icon description__text-icon_no'></span>
-        &mdash;&nbsp;говорит, что какой то&nbsp;из&nbsp;цветов в&nbsp;нашем
-        варианте отсутствует в&nbsp;секретном коде.
+        &mdash;&nbsp;говорит, что какой-то&nbsp;из&nbsp;цветов в&nbsp;нашем
+        варианте отсутствует в&nbsp;&laquo;Секретном Коде&raquo;;
       </p>
       <p className='description__text description__text-color-blue'>
-        Цвета в&nbsp;секретном коде могут повторяться, например: красный синий
-        красный красный.
+        Цвета в&nbsp;&laquo;Секретном Коде&raquo; могут повторяться, например:
+        красный синий красный красный.
       </p>
       <p className='description__text description__text-color-green'>
         Иконки ответа всегда распологаются в&nbsp;случайном порядке, т.е.
         положение иконки в&nbsp;ответе скорее всего не&nbsp;совпадает
-        с&nbsp;положением цвета в&nbsp;секретном коде или цвета в&nbsp;нашем
-        варианте.
+        с&nbsp;положением цвета в&nbsp;&laquo;Секретном Коде&raquo; или цвета
+        в&nbsp;нашем варианте.
       </p>
       <h2 className='description__title'>Заключение</h2>
       <p className='description__text description__text-color-green'>

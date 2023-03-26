@@ -16,9 +16,10 @@ const generateColorCode = () => {
       case 5:
         return 'brown';
       default:
-        return 'red';
+        return new Error('out of range');
     }
   }
+
   return {
     first: rndColor(),
     second: rndColor(),

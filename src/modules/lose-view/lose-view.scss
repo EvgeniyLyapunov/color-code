@@ -1,0 +1,28 @@
+@import '../../style/variables.scss';
+@import '../../style//mixins.scss';
+
+.lose-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+  transition: 1s all ease-in-out;
+  @include game-bg;
+  &__words {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+  }
+  &__btn-close {
+    @include btn-next;
+  }
+}

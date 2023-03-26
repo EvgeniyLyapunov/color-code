@@ -6,9 +6,9 @@ import {
   usersMoves,
   responsesToUserMoves,
   isWin,
-  isLose,
   lifePower,
 } from '../../../../redux/slices/gameSlice';
+import { gameStage } from '../../../../redux/slices/globalSlice';
 import clearUserCodeField from '../../../../utils/clearUserCodeField';
 import generateAnswer from '../../../../utils/generateAnswer';
 import checkForVictory from '../../../../utils/checkForVictory';
@@ -50,9 +50,9 @@ const ConfirmBtn = ({ show }) => {
         }
         // проверка оставшихся ходов
         if (!checkWin && isAlive === 15) {
-          dispatch(isLose());
+          dispatch(gameStage('lose'));
         }
-      }, 400);
+      }, 1000);
     }, 450);
   };
 
