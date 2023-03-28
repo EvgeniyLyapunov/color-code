@@ -65,21 +65,25 @@
 ---
 ## 🛠 Стек, технологии, библиотеки<br>
 <div>
-  <a href="https://www.javascript.com/">
+  <a href="https://www.javascript.com/" >
     <img width="50" height="50" title="java-script" src="https://user-images.githubusercontent.com/77357671/210012086-6591b665-5700-4d93-ba8d-90f91bec4bd6.svg"/>
-  </a>
+  </a>&nbsp;&nbsp;
   <a href="https://ru.reactjs.org/">
     <img width="50" height="50" title="react" src="https://user-images.githubusercontent.com/77357671/227791294-e6148c17-fff1-4b66-aedd-b4b76d77e62a.svg"/>
-  </a>
+  </a>&nbsp;&nbsp;
   <a href="https://create-react-app.dev/">
     <img width="50" height="50" title="create-react-app" src="https://user-images.githubusercontent.com/77357671/227791473-81c85026-dc75-4a98-8d0d-d19a2b5ecb76.svg"/>
-  </a>
+  </a>&nbsp;&nbsp;
+  <a href="https://redux.js.org/">
+    <img width="50" height="50" title="redux" src="https://user-images.githubusercontent.com/77357671/228323314-8fe17dfe-4b70-4367-8887-fdf3a65bddb1.svg"/>
+  </a>&nbsp;&nbsp;
   <a href="https://sass-scss.ru/">
     <img width="50" height="50" title="sass" src="https://user-images.githubusercontent.com/77357671/227791678-949b584b-dc12-457c-85d1-ed110e5a1faa.svg"/>
   </a>
 </div>
 
 ☘️&nbsp; [classnames](https://www.npmjs.com/package/classnames)<br>
+
 
 
 
